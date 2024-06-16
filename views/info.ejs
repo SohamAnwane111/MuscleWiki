@@ -1,0 +1,34 @@
+<%- include("./partials/new-header.ejs") -%>
+
+<div class="info-container">
+  <% if (locals.data && data.length > 0) { %> <% data.forEach(item => { %>
+  <div class="card">
+    <h2 class="title"><%= item.Muscles %></h2>
+    <p><strong><span class="title">Work Out: </span></strong> <%= item.WorkOut %></p>
+    <p><strong><span class="title">Intensity Level:</span></strong> <%= item.Intensity_Level %></p>
+    <p><strong><span class="title">Beginner Sets:</span></strong> <%= item["Beginner Sets"] %></p>
+    <p><strong><span class="title">Intermediate Sets:</span></strong> <%= item["Intermediate Sets"] %></p>
+    <p><strong><span class="title">Expert Sets:</span></strong> <%= item["Expert Sets"] %></p>
+    <p><strong><span class="title">Equipment:</span></strong> <%= item.Equipment %></p>
+    <p><strong><span class="title">Explanation:</span></strong> <%= item.Explaination %></p>
+    <% if (item["Long Explanation"]) { %>
+    <p><strong><span class="title">Long Explanation:</span></strong> <%= item["Long Explanation"] %></p>
+    <% } %> <% if (item.Video) { %>
+    <p>
+      <strong><span class="title">Tutorial:</span></strong>
+      <a href="<%= item.Video %>" target="_blank">Watch here</a>
+    </p>
+    <% } %>
+  </div>
+  <% }); %> <% } else { %>
+  <p>No data available.</p>
+  <% } %>
+  </div>
+    <form class="go-back-form" action="/home/info" method="post">
+      <button class="go-back-button" type="submit">
+        <img src="/assets/home.png" alt="" />
+        <span>Home</span>
+      </button>
+    </form>
+
+<%- include("./partials/footer.ejs") -%>

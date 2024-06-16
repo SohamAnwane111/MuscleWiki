@@ -1,0 +1,54 @@
+<%- include("./partials/new-header.ejs") -%>
+
+<div>
+  <% if (locals.data && locals.data.length > 0) { %>
+  <div class="all-pr">
+    <% data.forEach((element, index) => { %>
+
+        <form class="pr" action="/pr" method="post">
+        <p class="pr-heading">Personal Record <%= index + 1 %></p>
+      <button
+        class="del-btn"
+        type="submit"
+        name="toDelete"
+        value="<%= element.date %>#<%= element.text %>"
+      >
+        <img src="/assets/remove.png" alt="" />
+      </button>
+
+      <div id="<%= element.id %>" class="inner-div">
+        <strong class="strong-txt">Date :</strong>
+        <span class="s1"><%= element.date %></span><br />
+      </div>
+      <div id="<%= element.id %>" class="inner-div">
+        <strong class="strong-txt">Exercise :</strong>
+        <span class="s2"><%= element.text %></span>
+      </div>
+    </form>
+    <% }); %>
+  </div>
+  <% } else { %>
+  <h1 class="no-pr">No Personal record entries found!</h1>
+  <% } %>
+
+  <div class="add-form-div">
+    <form action="/pr" method="post" class="add-form">
+      <input type="date" name="pr-date" />
+      <input type="text" name="pr-text" />
+      <button type="submit">Add</button>
+    </form>
+  </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const divs = document.querySelectorAll('.pr');
+    for (let i = 0; i < divs.length; i++) {
+        const duration = ((divs.length - i) * 0.25) + 's';
+        divs[i].style.animationDuration = duration;
+    }
+});
+
+</script>
+
+<%- include("./partials/footer.ejs") -%>

@@ -1,0 +1,124 @@
+<%- include("./partials/new-header.ejs") -%>
+
+
+<div class="outer-div">
+  </div>
+    <h2 class="split-heading">Workout Split</h2>
+    <form class="plan-form" action="/home/plans" method="post">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th class="intersection">Day</th>
+                    <th>Biceps</th>
+                    <th>Triceps</th>
+                    <th>Chest</th>
+                    <th>Back</th>
+                    <th>Legs</th>
+                    <th>Abs</th>
+                    <th>Trapezius</th>
+                    <th>Shoulders</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="day">Monday</td>
+                    <td><input type="checkbox" id="monday-biceps" name="monday[]" value="biceps" ></td>
+                    <td><input type="checkbox" id="monday-triceps" name="monday[]" value="triceps" ></td>
+                    <td><input type="checkbox" id="monday-chest" name="monday[]" value="chest" ></td>
+                    <td><input type="checkbox" id="monday-back" name="monday[]" value="back" ></td>
+                    <td><input type="checkbox" id="monday-legs" name="monday[]" value="legs" ></td>
+                    <td><input type="checkbox" id="monday-abs" name="monday[]" value="abs" ></td>
+                    <td><input type="checkbox" id="monday-trapezius" name="monday[]" value="trapezius" ></td>
+                    <td><input type="checkbox" id="monday-shoulders" name="monday[]" value="shoulders" ></td>
+                </tr>
+                <tr>
+                    <td class="day">Tuesday</td>
+                    <td><input type="checkbox" id="tuesday-biceps" name="tuesday[]" value="biceps" ></td>
+                    <td><input type="checkbox" id="tuesday-triceps" name="tuesday[]" value="triceps" ></td>
+                    <td><input type="checkbox" id="tuesday-chest" name="tuesday[]" value="chest" ></td>
+                    <td><input type="checkbox" id="tuesday-back" name="tuesday[]" value="back" ></td>
+                    <td><input type="checkbox" id="tuesday-legs" name="tuesday[]" value="legs" ></td>
+                    <td><input type="checkbox" id="tuesday-abs" name="tuesday[]" value="abs" ></td>
+                    <td><input type="checkbox" id="tuesday-trapezius" name="tuesday[]" value="trapezius" ></td>
+                    <td><input type="checkbox" id="tuesday-shoulders" name="tuesday[]" value="shoulders" ></td>
+                </tr>
+                <tr>
+                    <td class="day">Wednesday</td>
+                    <td><input type="checkbox" id="wednesday-biceps" name="wednesday[]" value="biceps" ></td>
+                    <td><input type="checkbox" id="wednesday-triceps" name="wednesday[]" value="triceps" ></td>
+                    <td><input type="checkbox" id="wednesday-chest" name="wednesday[]" value="chest" ></td>
+                    <td><input type="checkbox" id="wednesday-back" name="wednesday[]" value="back" ></td>
+                    <td><input type="checkbox" id="wednesday-legs" name="wednesday[]" value="legs" ></td>
+                    <td><input type="checkbox" id="wednesday-abs" name="wednesday[]" value="abs" ></td>
+                    <td><input type="checkbox" id="wednesday-trapezius" name="wednesday[]" value="trapezius" ></td>
+                    <td><input type="checkbox" id="wednesday-shoulders" name="wednesday[]" value="shoulders" ></td>
+                </tr>
+                <tr>
+                    <td class="day">Thursday</td>
+                    <td><input type="checkbox" id="thursday-biceps" name="thursday[]" value="biceps" ></td>
+                    <td><input type="checkbox" id="thursday-triceps" name="thursday[]" value="triceps" ></td>
+                    <td><input type="checkbox" id="thursday-chest" name="thursday[]" value="chest" ></td>
+                    <td><input type="checkbox" id="thursday-back" name="thursday[]" value="back" ></td>
+                    <td><input type="checkbox" id="thursday-legs" name="thursday[]" value="legs" ></td>
+                    <td><input type="checkbox" id="thursday-abs" name="thursday[]" value="abs" ></td>
+                    <td><input type="checkbox" id="thursday-trapezius" name="thursday[]" value="trapezius" ></td>
+                    <td><input type="checkbox" id="thursday-shoulders" name="thursday[]" value="shoulders" ></td>
+                </tr>
+                <tr>
+                    <td class="day">Friday</td>
+                    <td><input type="checkbox" id="friday-biceps" name="friday[]" value="biceps" ></td>
+                    <td><input type="checkbox" id="friday-triceps" name="friday[]" value="triceps" ></td>
+                    <td><input type="checkbox" id="friday-chest" name="friday[]" value="chest" ></td>
+                    <td><input type="checkbox" id="friday-back" name="friday[]" value="back" ></td>
+                    <td><input type="checkbox" id="friday-legs" name="friday[]" value="legs" ></td>
+                    <td><input type="checkbox" id="friday-abs" name="friday[]" value="abs" ></td>
+                    <td><input type="checkbox" id="friday-trapezius" name="friday[]" value="trapezius" ></td>
+                    <td><input type="checkbox" id="friday-shoulders" name="friday[]" value="shoulders" ></td>
+                </tr>
+                <tr>
+                    <td class="day">Saturday</td>
+                    <td><input type="checkbox" id="saturday-biceps" name="saturday[]" value="biceps" ></td>
+                    <td><input type="checkbox" id="saturday-triceps" name="saturday[]" value="triceps" ></td>
+                    <td><input type="checkbox" id="saturday-chest" name="saturday[]" value="chest" ></td>
+                    <td><input type="checkbox" id="saturday-back" name="saturday[]" value="back" ></td>
+                    <td><input type="checkbox" id="saturday-legs" name="saturday[]" value="legs" ></td>
+                    <td><input type="checkbox" id="saturday-abs" name="saturday[]" value="abs" ></td>
+                    <td><input type="checkbox" id="saturday-trapezius" name="saturday[]" value="trapezius" ></td>
+                    <td><input type="checkbox" id="saturday-shoulders" name="saturday[]" value="shoulders" ></td>
+                </tr>
+                <tr>
+                    <td class="day">Sunday</td>
+                    <td><input type="checkbox" id="sunday-biceps" name="sunday[]" value="biceps" ></td>
+                    <td><input type="checkbox" id="sunday-triceps" name="sunday[]" value="triceps" ></td>
+                    <td><input type="checkbox" id="sunday-chest" name="sunday[]" value="chest" ></td>
+                    <td><input type="checkbox" id="sunday-back" name="sunday[]" value="back" ></td>
+                    <td><input type="checkbox" id="sunday-legs" name="sunday[]" value="legs" ></td>
+                    <td><input type="checkbox" id="sunday-abs" name="sunday[]" value="abs" ></td>
+                    <td><input type="checkbox" id="sunday-trapezius" name="sunday[]" value="trapezius" ></td>
+                    <td><input type="checkbox" id="sunday-shoulders" name="sunday[]" value="shoulders" ></td>
+                </tr>
+            </tbody>
+        </table>
+        <button class="save-btn" type="submit">SAVE</button>
+        </form>
+        <form action="/home/plans" method="post">
+            <button class="save-btn reset-btn" type="submit">RESET</button>
+        </form>
+</div>
+
+
+<% if (locals.data) { %>
+  <script>
+    <% data.plans.forEach((item) => { %>
+      document.getElementById('<%- item %>').checked = true;
+    <% }) %>
+  </script>
+<% } %>
+
+
+<script>
+  const btn = document.getElementsByClassName("plan-btn");
+  btn.style.display = "none";
+</script>
+
+<%- include("./partials/footer.ejs") -%>
