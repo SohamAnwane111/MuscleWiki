@@ -49,7 +49,7 @@ Here is a recorded video demonstration: https://drive.google.com/file/d/1S50_-ff
 ### Contact
 ![Screenshot (38)](https://github.com/SohamAnwane111/MuscleWiki/assets/139840433/874a434e-1b20-493d-8e7d-2acb9fef9d03)
 
-### Development
+## Development
 Want to contribute? Great!
 
 To fix a bug or enhance an existing module, follow these steps:
